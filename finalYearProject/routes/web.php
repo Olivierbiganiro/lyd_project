@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\student\chatcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +25,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/student/chat', [chatcontroller::class, 'index'])->name('student.chat');
 });
